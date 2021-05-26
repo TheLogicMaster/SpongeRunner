@@ -1,0 +1,581 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/GUI.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://title-screen.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/Crate.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Grass.tscn" type="PackedScene" id=6]
+[ext_resource path="res://sponge.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/Spikes.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scripts/Spikes.gd" type="Script" id=9]
+[ext_resource path="res://Models/tree.glb" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Burger.tscn" type="PackedScene" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+size = 34
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 86
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+font_data = ExtResource( 3 )
+
+[sub_resource type="InputEventAction" id=4]
+action = "ui_accept"
+
+[sub_resource type="ShortCut" id=5]
+shortcut = SubResource( 4 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 45
+font_data = ExtResource( 3 )
+
+[sub_resource type="ProceduralSky" id=7]
+ground_bottom_color = Color( 0.0941176, 0.639216, 1, 1 )
+ground_horizon_color = Color( 0.219608, 0.815686, 0.913725, 1 )
+ground_curve = 0.077275
+sun_longitude = 180.0
+
+[sub_resource type="Environment" id=8]
+background_mode = 2
+background_sky = SubResource( 7 )
+ambient_light_color = Color( 0.831373, 0.831373, 0.831373, 1 )
+ambient_light_energy = 2.33
+
+[node name="Main" type="Spatial"]
+transform = Transform( 0.999999, 0.00123023, 0.000738341, -0.00123001, 0.999999, -0.000301718, -0.000738711, 0.000300811, 1, 0, 0, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
+
+[node name="Level" type="Node" parent="."]
+
+[node name="crate" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+
+[node name="crate2" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1, 0 )
+
+[node name="crate3" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -1, 0 )
+
+[node name="crate4" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -1, 0 )
+
+[node name="crate5" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -1, 0 )
+
+[node name="crate6" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 86.5, -3, 0 )
+
+[node name="crate7" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 88.5, -3, 0 )
+
+[node name="crate8" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 90.5, -3, 0 )
+
+[node name="crate9" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 92.5, -3, 0 )
+
+[node name="crate10" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 96.5, -2, 0 )
+
+[node name="crate11" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 98.5, -2, 0 )
+
+[node name="crate12" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 100.5, -2, 0 )
+
+[node name="crate13" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 104.5, -1, 0 )
+
+[node name="crate14" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 106.5, -1, 0 )
+
+[node name="crate15" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 112.5, -3, 0 )
+
+[node name="crate16" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 114.5, -3, 0 )
+
+[node name="crate17" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( 4.37114e-08, 1, -6.60024e-15, 1, -4.37114e-08, -1.50996e-07, -1.50996e-07, 0, -1, 120.5, -3, 0 )
+
+[node name="crate18" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 122.5, -3, 0 )
+
+[node name="grass1" parent="Level" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0953, -1, 0 )
+
+[node name="grass2" parent="Level" instance=ExtResource( 6 )]
+transform = Transform( 0.0010229, 0.00170909, 0.999998, -0.000248174, 0.999999, -0.00170884, -0.999999, -0.000246415, 0.00102332, 12.0953, -1, 0 )
+
+[node name="grass3" parent="Level" instance=ExtResource( 6 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 14.0953, -1, 0 )
+
+[node name="grass4" parent="Level" instance=ExtResource( 6 )]
+transform = Transform( -0.000967127, -0.00216426, 0.999997, 0.000312151, 0.999998, 0.00216456, -0.999999, 0.000314245, -0.000966448, 16.0953, -0.202411, 0 )
+
+[node name="grass9" parent="Level" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.0953, -1, 0 )
+
+[node name="grass10" parent="Level" instance=ExtResource( 6 )]
+transform = Transform( 0.0010229, 0.00170909, 0.999998, -0.000248174, 0.999999, -0.00170884, -0.999999, -0.000246415, 0.00102332, 20.0953, -1, 0 )
+
+[node name="grass11" parent="Level" instance=ExtResource( 6 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 22.0953, -1.56363, 0 )
+
+[node name="grass12" parent="Level" instance=ExtResource( 6 )]
+transform = Transform( -0.000967127, -0.00216426, 0.999997, 0.000312151, 0.999998, 0.00216456, -0.999999, 0.000314245, -0.000966448, 24.0953, -0.372379, 0 )
+
+[node name="grass5" parent="Level" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 2, 28.0953, -1, -1 )
+
+[node name="grass6" parent="Level" instance=ExtResource( 6 )]
+transform = Transform( 0.0010229, 0.00170909, 0.999998, -0.000248174, 0.999999, -0.00170884, -0.999999, -0.000246415, 0.00102332, 30.0953, -1, 0 )
+
+[node name="grass7" parent="Level" instance=ExtResource( 6 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 32.0953, -1, 0 )
+
+[node name="grass8" parent="Level" instance=ExtResource( 6 )]
+transform = Transform( 7.54979e-08, 0, -1, 0, 1, 0, 1, 0, 7.54979e-08, 34.0953, -1, 0 )
+
+[node name="grass13" parent="Level" instance=ExtResource( 6 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 39.0953, -1, 0 )
+
+[node name="grass14" parent="Level" instance=ExtResource( 6 )]
+transform = Transform( 7.54979e-08, 0, -1, 0, 1, 0, 1, 0, 7.54979e-08, 41.0953, -1, 0 )
+
+[node name="grass15" parent="Level" instance=ExtResource( 6 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 43.0953, -1, 0 )
+
+[node name="grass16" parent="Level" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 1.19209e-07, 0, 1, 0, -1.19209e-07, 0, 1, 45.0953, -1, 0 )
+
+[node name="grass17" parent="Level" instance=ExtResource( 6 )]
+transform = Transform( 7.54976e-08, 0, -1, 0, 1, 0, 1, 0, 7.54976e-08, 49.0953, -1, 0 )
+
+[node name="grass18" parent="Level" instance=ExtResource( 6 )]
+transform = Transform( -1, 0, -3.17862e-08, 0, 1, 0, 3.17862e-08, 0, -1, 53.0953, -1, 0 )
+
+[node name="grass19" parent="Level" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 1.19209e-07, 0, 1, 0, -1.19209e-07, 0, 1, 57.5953, -1, 0 )
+
+[node name="grass20" parent="Level" instance=ExtResource( 6 )]
+transform = Transform( -1.6292e-07, 0, 1, 0, 1, 0, -1, 0, -1.6292e-07, 62.0953, -1, 0 )
+
+[node name="grass21" parent="Level" instance=ExtResource( 6 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, 66.5953, -1, 0 )
+
+[node name="grass22" parent="Level" instance=ExtResource( 6 )]
+transform = Transform( 2.50343e-07, 0, -1, 0, 1, 0, 1, 0, 2.50343e-07, 68.5953, -1, 0 )
+
+[node name="grass24" parent="Level" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 2.94055e-07, 0, 1, 0, -2.94055e-07, 0, 1, 70.5953, -1, 0 )
+
+[node name="grass25" parent="Level" instance=ExtResource( 6 )]
+transform = Transform( -3.37766e-07, 0, 1, 0, 1, 0, -1, 0, -3.37766e-07, 72.5953, -1, 0 )
+
+[node name="grass26" parent="Level" instance=ExtResource( 6 )]
+transform = Transform( -1, 0, -3.81477e-07, 0, 1, 0, 3.81477e-07, 0, -1, 76.5953, -3, 0 )
+
+[node name="grass27" parent="Level" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 2.94055e-07, 0, 1, 0, -2.94055e-07, 0, 1, 81.5953, -3, 0 )
+
+[node name="grass23" parent="Level" instance=ExtResource( 6 )]
+transform = Transform( 2.50343e-07, 0, -1, 0, 1, 0, 1, 0, 2.50343e-07, 68.5953, -1, 0 )
+
+[node name="spikes" parent="Level" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 94.5, -3, 0 )
+script = ExtResource( 9 )
+
+[node name="spikes2" parent="Level" instance=ExtResource( 8 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 102.5, -1, 0 )
+script = ExtResource( 9 )
+
+[node name="spikes3" parent="Level" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 108.5, -3, 0 )
+script = ExtResource( 9 )
+
+[node name="spikes4" parent="Level" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 110.5, -3, 0 )
+script = ExtResource( 9 )
+
+[node name="spikes5" parent="Level" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 116.5, -3, 0 )
+script = ExtResource( 9 )
+
+[node name="spikes6" parent="Level" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 118.5, -3, 0 )
+script = ExtResource( 9 )
+
+[node name="crate19" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 128.5, -3, 0 )
+
+[node name="crate20" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( 4.37114e-08, 1, -6.60024e-15, 1, -4.37114e-08, -1.50996e-07, -1.50996e-07, 0, -1, 130.5, -3, 0 )
+
+[node name="spikes7" parent="Level" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 124.5, -3, 0 )
+script = ExtResource( 9 )
+
+[node name="spikes8" parent="Level" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 126.5, -3, 0 )
+script = ExtResource( 9 )
+
+[node name="crate21" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 136.5, -3, 0 )
+
+[node name="crate22" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 138.5, -3, 0 )
+
+[node name="spikes9" parent="Level" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 132.5, -3, 0 )
+script = ExtResource( 9 )
+
+[node name="spikes10" parent="Level" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 134.5, -3, 0 )
+script = ExtResource( 9 )
+
+[node name="crate23" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 142.5, -2, 0 )
+
+[node name="crate24" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( 4.37114e-08, -1, -6.60024e-15, -1, -4.37114e-08, 1.50996e-07, -1.50996e-07, 0, -1, 144.5, -2, 0 )
+
+[node name="spikes11" parent="Level" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 140.5, -2, 0 )
+script = ExtResource( 9 )
+
+[node name="crate25" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 148.5, -1, 0 )
+
+[node name="crate26" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( 4.37114e-08, -1, -6.60024e-15, -1, -4.37114e-08, 1.50996e-07, -1.50996e-07, 0, -1, 150.5, -1, 0 )
+
+[node name="spikes12" parent="Level" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 146.5, -1, 0 )
+script = ExtResource( 9 )
+
+[node name="crate27" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 154.5, 0, 0 )
+
+[node name="crate28" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( 1.50996e-07, 4.37114e-08, 1, -1, -4.37114e-08, 1.50996e-07, 4.37114e-08, -1, 4.37114e-08, 156.5, 0, 0 )
+
+[node name="crate29" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 158.5, 0, 0 )
+
+[node name="crate30" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( 4.37114e-08, -1, -6.60024e-15, -1, -4.37114e-08, 1.50996e-07, -1.50996e-07, 0, -1, 160.5, 0, 0 )
+
+[node name="crate31" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 164.5, 0, 0 )
+
+[node name="crate32" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 166.5, 0, 0 )
+
+[node name="spikes13" parent="Level" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 152.5, 0, 0 )
+script = ExtResource( 9 )
+
+[node name="spikes14" parent="Level" instance=ExtResource( 8 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 159.3, 3.8, 0 )
+script = ExtResource( 9 )
+
+[node name="crate33" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 168.5, 0, 0 )
+
+[node name="crate34" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 170.5, 0, 0 )
+
+[node name="spikes15" parent="Level" instance=ExtResource( 8 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 169.3, 3.8, 0 )
+script = ExtResource( 9 )
+
+[node name="crate35" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 174.5, 0, 0 )
+
+[node name="crate36" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( 4.37114e-08, -1, 1.50996e-07, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, -1.50996e-07, -1, 176.5, 0, 0 )
+
+[node name="crate37" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 178.5, 0, 0 )
+
+[node name="crate38" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( 4.37114e-08, -1, 1.50996e-07, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, -1.50996e-07, -1, 180.5, 0, 0 )
+
+[node name="crate39" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 184.5, 0, 0 )
+
+[node name="crate40" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( 4.37114e-08, -1, 1.50996e-07, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, -1.50996e-07, -1, 186.5, 0, 0 )
+
+[node name="crate41" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 188.5, 0, 0 )
+
+[node name="crate42" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( 4.37114e-08, -1, 1.50996e-07, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, -1.50996e-07, -1, 190.5, 0, 0 )
+
+[node name="crate43" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 192.5, 0, 0 )
+
+[node name="crate44" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( 4.37114e-08, -1, 1.50996e-07, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, -1.50996e-07, -1, 194.5, 0, 0 )
+
+[node name="crate45" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 196.5, 0, 0 )
+
+[node name="crate46" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( 4.37114e-08, -1, 1.50996e-07, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, -1.50996e-07, -1, 198.5, 0, 0 )
+
+[node name="crate47" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 200.5, 0, 0 )
+
+[node name="crate48" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( 4.37114e-08, -1, 1.50996e-07, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, -1.50996e-07, -1, 202.5, 0, 0 )
+
+[node name="crate49" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 204.5, 0, 0 )
+
+[node name="crate50" parent="Level" instance=ExtResource( 5 )]
+transform = Transform( 4.37114e-08, -1, 1.50996e-07, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, -1.50996e-07, -1, 206.5, 0, 0 )
+
+[node name="spikes16" parent="Level" instance=ExtResource( 8 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 179.3, 3.8, 0 )
+script = ExtResource( 9 )
+
+[node name="burger" parent="Level" instance=ExtResource( 11 )]
+transform = Transform( 0.999999, 0.00123023, 0.000738342, -0.00123001, 0.999999, -0.000301718, -0.000738712, 0.000300811, 1, 206.2, 2, -0.1 )
+collision_layer = 0
+collision_mask = 2
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.965324, 0.0563423, -0.254902, 0.0109504, 0.966834, 0.255173, 0.260825, -0.249116, 0.93269, -1.09944, 2.20797, 3.4857 )
+
+[node name="GUI" type="CanvasLayer" parent="."]
+script = ExtResource( 2 )
+
+[node name="Score" type="Label" parent="GUI"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 29.6985
+margin_top = -67.4558
+margin_right = 345.698
+margin_bottom = -25.4558
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.964706, 0.909804, 0.0666667, 1 )
+text = "Score: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Controls" type="Label" parent="GUI"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -259.591
+margin_top = 65.964
+margin_right = 269.409
+margin_bottom = 107.964
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.964706, 0.909804, 0.0666667, 1 )
+text = "Press the Spacebar to Jump!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TitleScreen" type="TextureRect" parent="GUI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="GUI/TitleScreen"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -278.0
+margin_top = 50.0
+margin_right = 278.0
+margin_bottom = 154.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.333333, 0.360784, 0.415686, 1 )
+text = "Sponge Run"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="GUI/TitleScreen"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -64.0
+margin_top = -33.5
+margin_right = 64.0
+margin_bottom = 33.5
+custom_fonts/font = SubResource( 3 )
+shortcut = SubResource( 5 )
+text = "Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="GUI/TitleScreen"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -170.0
+margin_right = 702.0
+margin_bottom = 403.0
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DeathScreen" type="TextureRect" parent="GUI"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="GUI/DeathScreen"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -225.351
+margin_top = 58.5676
+margin_right = 227.649
+margin_bottom = 162.568
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.333333, 0.360784, 0.415686, 1 )
+text = "You Died!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="GUI/DeathScreen"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -171.999
+margin_top = -120.322
+margin_right = 190.001
+margin_bottom = -59.3219
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.407843, 0.407843, 0.407843, 1 )
+text = "Final Score: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="GUI/DeathScreen"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -88.567
+margin_top = -33.0
+margin_right = 69.433
+margin_bottom = 34.0
+custom_fonts/font = SubResource( 3 )
+shortcut = SubResource( 5 )
+text = "OK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="GUI/DeathScreen"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -170.0
+margin_right = 702.0
+margin_bottom = 403.0
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WinScreen" type="TextureRect" parent="GUI"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="GUI/WinScreen"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -225.351
+margin_top = 58.5676
+margin_right = 227.649
+margin_bottom = 162.568
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.333333, 0.360784, 0.415686, 1 )
+text = "You Won!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="GUI/WinScreen"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -88.567
+margin_top = -33.0
+margin_right = 69.433
+margin_bottom = 34.0
+custom_fonts/font = SubResource( 3 )
+shortcut = SubResource( 5 )
+text = "OK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="GUI/WinScreen"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -170.0
+margin_right = 702.0
+margin_bottom = 403.0
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 8 )
+
+[node name="tree" parent="." instance=ExtResource( 10 )]
+transform = Transform( 1.46934e-06, -0.00153173, -0.999999, -0.000928292, 0.999998, -0.00153173, 0.999999, 0.000928288, 4.83706e-08, 27.9015, 0.033722, -1.9794 )
+
+[connection signal="death" from="Player" to="GUI" method="on_game_over"]
+[connection signal="win" from="Player" to="GUI" method="on_game_win"]
+[connection signal="pressed" from="GUI/TitleScreen/Button" to="GUI" method="on_game_start"]
+[connection signal="pressed" from="GUI/TitleScreen/Button" to="Player" method="on_game_start"]
+[connection signal="pressed" from="GUI/DeathScreen/Button" to="GUI" method="on_title_screen"]
+[connection signal="pressed" from="GUI/WinScreen/Button" to="GUI" method="on_title_screen"]
+[connection signal="timeout" from="StartTimer" to="GUI" method="on_hide_controls"]
+[connection signal="timeout" from="StartTimer" to="Player" method="on_running_start"]
